@@ -1,7 +1,7 @@
 from kocrawl.editor.base_editor import BaseEditor
 import re
 
-#TODO uni_editor
+#TODO uni_editor 
 class UniEditor(BaseEditor):
     
     def edit_map(self, location: str, place: str, result: dict) -> dict:

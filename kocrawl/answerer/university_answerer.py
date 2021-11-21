@@ -16,11 +16,10 @@ class UniAnswerer(BaseAnswerer):
         msg = self.uni_init_format(palce=place)
         msg += '{location} 의'
 
-        msg = self._add_msg_from_dict(result, 'context', msg, '{context}등과 관련 있는')
         msg = self._add_msg_from_dict(result, 'category', msg, '{category}')
         msg = self._add_msg_from_dict(result, 'address', msg, '주소는 {address}입니다.')
         msg = self._add_msg_from_dict(result, 'thumUrl', msg, '> 사진보기 : {thumUrl}')
-        msg = msg.format(location=location, context=result['context'], category=result['category'],
-                         name=result['name'], address=result['address'])
+        msg = msg.format(location=location, category=result['category'],address=result['address'], 
+                         thumUrl=result['thumUrl'])
 
         return msg
